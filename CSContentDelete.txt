@@ -11,13 +11,8 @@ DELAY 750
 STRING cd Windows\System32\Drivers\Crowdstrike\
 ENTER
 DELAY 750
-STRING ren C-00000291-00000000-00000032.sys C-00000291-00000000-00000032.renamed
+STRING del C-00000291*.sys
 ENTER
 DELAY 750
 STRING shutdown -r -t 0
 ENTER
-
-C:
-cd Windows\System32\Drivers\Crowdstrike\
-ren C-00000291-00000000-00000032.sys C-00000291-00000000-00000032.renamed
-shutdown -r -t 0
