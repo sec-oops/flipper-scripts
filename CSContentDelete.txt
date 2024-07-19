@@ -1,0 +1,23 @@
+REM Author: sec-oops
+REM Description: Quickly rename the Crowdstrike Content with issue causing BSOD (Assumes you're in Recovery Mode and Past BitLocker on Corporate Machines)
+REM Version: 1.0
+REM Category: Execution
+
+
+DELAY 750
+STRING C:
+ENTER
+DELAY 750
+STRING cd Windows\System32\Drivers\Crowdstrike\
+ENTER
+DELAY 750
+STRING ren C-00000291-00000000-00000032.sys C-00000291-00000000-00000032.renamed
+ENTER
+DELAY 750
+STRING shutdown -r -t 0
+ENTER
+
+C:
+cd Windows\System32\Drivers\Crowdstrike\
+ren C-00000291-00000000-00000032.sys C-00000291-00000000-00000032.renamed
+shutdown -r -t 0
